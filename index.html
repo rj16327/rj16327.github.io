@@ -176,33 +176,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><p><a href="https://git-scm.com/download" target="_blank" rel="noopener">git下载地址</a></p>
+        <h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><h3 id="1-1-安装git"><a href="#1-1-安装git" class="headerlink" title="1.1 安装git"></a>1.1 安装git</h3><p><a href="https://git-scm.com/download" target="_blank" rel="noopener">git下载地址</a></p>
 <p>安装完成后查看版本</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
 
-<h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js下载地址</a></p>
+<h3 id="1-2-安装node-js"><a href="#1-2-安装node-js" class="headerlink" title="1.2 安装node.js"></a>1.2 安装node.js</h3><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js下载地址</a></p>
 <p>安装完成后查看版本</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
 
 <h2 id="二、创建Github仓库"><a href="#二、创建Github仓库" class="headerlink" title="二、创建Github仓库"></a>二、创建Github仓库</h2><p>1.打开<a href="https://github.com/" target="_blank" rel="noopener">github</a>并登录（没有账号就注册）</p>
 <p>2.选中Repositories栏，然后点击右侧的New按钮创建</p>
 <p>3.新建一个名为 你的用户名.github.io 的仓库</p>
-<h2 id="三、配置SSH-key"><a href="#三、配置SSH-key" class="headerlink" title="三、配置SSH key"></a>三、配置SSH key</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"xxx"</span> // 你的github用户名，非昵称</span><br><span class="line">git config --global user.email  <span class="string">"xxx@qq.com"</span> // 填写你的github注册邮箱</span><br><span class="line">ssh-keygen -t rsa -C <span class="string">"你的邮件地址"</span></span><br></pre></td></tr></table></figure>
+<h2 id="三、配置SSH-key"><a href="#三、配置SSH-key" class="headerlink" title="三、配置SSH key"></a>三、配置SSH key</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"xxx"</span> // 你的github用户名，非昵称</span><br><span class="line">git config --global user.email  <span class="string">"xxx@qq.com"</span> // 填写你的github注册邮箱</span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">"你的邮件地址"</span></span><br></pre></td></tr></table></figure>
 
-<p>1.然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件，记事本打开并复制里面的内容<br>2.打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：<br>3.将刚复制的内容粘贴到key那里，title随便填，最后保存。</p>
+<p>1.然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件，用记事本打开并复制里面的内容<br>2.打开你的<a href="https://github.com/" target="_blank" rel="noopener">github</a>主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：<br>3.将刚复制的内容粘贴到key那里，title随便填，最后保存。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com // 注意邮箱地址不用改</span><br></pre></td></tr></table></figure>
 
 <p>如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：<br>Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access.<br>看到这个信息说明SSH已配置成功！</p>
-<h2 id="四、Hexo"><a href="#四、Hexo" class="headerlink" title="四、Hexo"></a>四、Hexo</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Hexo是一个简单、快速、强大的基于 Github Pages 的博客发布工具，支持Markdown格式，有众多优秀插件和主题。</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
+<h2 id="四、Hexo"><a href="#四、Hexo" class="headerlink" title="四、Hexo"></a>四、Hexo</h2><h3 id="4-1-简介"><a href="#4-1-简介" class="headerlink" title="4.1 简介"></a>4.1 简介</h3><p>Hexo是一个简单、快速、强大的基于 Github Pages 的博客发布工具，支持Markdown格式，有众多优秀插件和主题。</p>
+<h3 id="4-2-安装"><a href="#4-2-安装" class="headerlink" title="4.2 安装"></a>4.2 安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
 
-<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>在电脑上新建一个名为hexo的文件夹并打开，然后右键选择Git Bash Here</p>
+<h3 id="4-3-初始化"><a href="#4-3-初始化" class="headerlink" title="4.3 初始化"></a>4.3 初始化</h3><p>在电脑上新建一个名为hexo的文件夹并打开，然后右键选择Git Bash Here</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">hexo g // 生成public文件夹</span><br><span class="line">hexo s // 开启本地预览服务，打开浏览器访问 http://localhost:4000</span><br></pre></td></tr></table></figure>
 
-<h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
+<h3 id="4-4-主题"><a href="#4-4-主题" class="headerlink" title="4.4 主题"></a>4.4 主题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
 
 <p>修改_config.yml中的theme: landscape改为theme: yilia，然后重新执行hexo g来重新生成。<br>如果出现一些莫名其妙的问题，可以先执行hexo clean来清理一下public的内容，然后再来重新生成和发布。</p>
-<h3 id="上传到github"><a href="#上传到github" class="headerlink" title="上传到github"></a>上传到github</h3><p>配置_config.yml</p>
+<h3 id="4-5-上传到github"><a href="#4-5-上传到github" class="headerlink" title="4.5 上传到github"></a>4.5 上传到github</h3><p>配置_config.yml</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: git@github.com:liuxianan/liuxianan.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
 <p>安装插件</p>
@@ -563,5 +563,5 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"log":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"superSample":2,"width":400,"height":500,"position":"right","hOffset":30,"vOffset":20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":1,"opacityOnHover":0.2}});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"log":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"superSample":2,"width":400,"height":500,"position":"right","hOffset":30,"vOffset":20},"mobile":{"show":false,"scale":0.2},"react":{"opacityDefault":1,"opacityOnHover":0.2}});</script></body>
 </html>
