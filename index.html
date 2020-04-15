@@ -156,6 +156,103 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/15/java/">java</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/15/java/" class="archive-article-date">
+  	<time datetime="2020-04-15T03:32:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、java基础题"><a href="#一、java基础题" class="headerlink" title="一、java基础题"></a>一、java基础题</h2><h3 id="1-1-i-和-i的区别"><a href="#1-1-i-和-i的区别" class="headerlink" title="1.1 i++和++i的区别"></a>1.1 i++和++i的区别</h3><p>相同点：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">i++和++i都是变量自增1，都等价于i=i+1</span><br><span class="line">如果i++,++i是一条单独的语句，两者没有任何区别</span><br><span class="line">i++和++i的使用仅仅针对变量， 5++和++5会报错，因为5不是变量</span><br></pre></td></tr></table></figure>
+
+<p>不同点：<br>如果i++,++i不是一条单独的语句，他们就有区别：</p>
+<p>i++是先运算后增1。如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int x = 5;</span><br><span class="line">int y = x++;</span><br><span class="line">System.out.println(<span class="string">"x="</span> + x + <span class="string">",y="</span> + y); // x=6,y=5</span><br></pre></td></tr></table></figure>
+
+<p>++i是先增1后运算。如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int x = 5;</span><br><span class="line">int y = ++x;</span><br><span class="line">System.out.println(<span class="string">"x="</span> + x + <span class="string">",y="</span> + y); // x=6,y=6</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-ListA通过”-”赋值给ListB的问题"><a href="#1-2-ListA通过”-”赋值给ListB的问题" class="headerlink" title="1.2 ListA通过”=”赋值给ListB的问题"></a>1.2 ListA通过”=”赋值给ListB的问题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;String&gt; A = new ArrayList&lt;String&gt;();</span><br><span class="line">A.add(<span class="string">"1"</span>);</span><br><span class="line">A.add(<span class="string">"2"</span>);</span><br><span class="line">ArrayList&lt;String&gt; B = new ArrayList&lt;String&gt;();</span><br><span class="line">B = A;</span><br><span class="line">A.clear();</span><br></pre></td></tr></table></figure>
+
+<p>A清空后发现B也清空了。<br>此时B对象相当与A对象的引用，而并不是将A对象的值单纯的传递给B对象。<br>即：B对象的操作将直接改变A对象。如B.add(“3”);结果A中也包含了”3”；</p>
+<p>解决：<br>将B = A换成下面</p>
+<p>方式一：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">B = new ArrayList&lt;&gt;(A);</span><br></pre></td></tr></table></figure>
+
+<p>方式二：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">B = A.clone();</span><br></pre></td></tr></table></figure>
+
+<p>方式三：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">B.addAll(A);</span><br></pre></td></tr></table></figure>
+
+<p>方式四：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(String s: A)&#123;</span><br><span class="line">  B.add(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/15/java/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-websocket" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -190,6 +287,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">WebSocket</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -282,7 +394,7 @@
 <p>最后你就可以在浏览器输入 xxx.github.io 访问你的博客页面了!</p>
 <h3 id="4-6-写博客"><a href="#4-6-写博客" class="headerlink" title="4.6 写博客"></a>4.6 写博客</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">'my-first-blog'</span></span><br></pre></td></tr></table></figure>
 
-<p>然后我们可以在source_posts里打开my-first-blog.md文件就可以写博客了！</p>
+<p>然后我们可以在source/_posts里打开my-first-blog.md文件就可以写博客了！</p>
 
       
 
@@ -291,6 +403,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">GitHub</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -491,6 +618,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">SpringBoot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">WebSocket</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
