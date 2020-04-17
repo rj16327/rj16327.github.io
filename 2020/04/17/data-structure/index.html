@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: SpringBoot | song</title>
+  <title>数据结构 | song</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="song">
-<meta property="og:url" content="http://yoursite.com/tags/SpringBoot/index.html">
+  <meta name="description" content="二叉树前序遍历（根–&gt;左–&gt;右） 1.访问根节点2.前序遍历左子树3.前序遍历右子树 中序遍历（左–&gt;根–&gt;右） 1.中序遍历左子树2.访问根节点3.中序遍历右子树 后序遍历（左–&gt;右–&gt;根） 1.后序遍历左子树2.后序遍历右子树3.访问根节点  前序遍历过程：  A(B,C)  A B(G,D) C(F,H)  A B G D(E) C F H  A B G">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构">
+<meta property="og:url" content="http://yoursite.com/2020/04/17/data-structure/index.html">
 <meta property="og:site_name" content="song">
+<meta property="og:description" content="二叉树前序遍历（根–&gt;左–&gt;右） 1.访问根节点2.前序遍历左子树3.前序遍历右子树 中序遍历（左–&gt;根–&gt;右） 1.中序遍历左子树2.访问根节点3.中序遍历右子树 后序遍历（左–&gt;右–&gt;根） 1.后序遍历左子树2.后序遍历右子树3.访问根节点  前序遍历过程：  A(B,C)  A B(G,D) C(F,H)  A B G D(E) C F H  A B G">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/images/data-structure/binaryTree.png">
+<meta property="article:published_time" content="2020-04-17T06:42:09.000Z">
+<meta property="article:modified_time" content="2020-04-17T07:07:41.793Z">
 <meta property="article:author" content="song">
+<meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/data-structure/binaryTree.png">
   
     <link rel="alternative" href="/atom.xml" title="song" type="application/atom+xml">
   
@@ -154,64 +161,186 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-data-structure" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/14/websocket/" class="archive-article-date">
-  	<time datetime="2020-04-14T02:29:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/14/websocket/">SpringBoot集成WebSocket，实现后台向前端推送数据或信息</a>
+    <h1 class="article-title" itemprop="name">
+      数据结构
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/04/17/data-structure/" class="archive-article-date">
+  	<time datetime="2020-04-17T06:42:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p>前序遍历（根–&gt;左–&gt;右）</p>
+<p>1.访问根节点<br>2.前序遍历左子树<br>3.前序遍历右子树</p>
+<p>中序遍历（左–&gt;根–&gt;右）</p>
+<p>1.中序遍历左子树<br>2.访问根节点<br>3.中序遍历右子树</p>
+<p>后序遍历（左–&gt;右–&gt;根）</p>
+<p>1.后序遍历左子树<br>2.后序遍历右子树<br>3.访问根节点</p>
+<p><img src="/images/data-structure/binaryTree.png" alt=""></p>
+<p>前序遍历过程：<br>  A(B,C)<br>  A B(G,D) C(F,H)<br>  A B G D(E) C F H<br>  A B G D E C F H</p>
+<p>中序遍历过程：<br>  A(B,C)<br>  B(G,D) A C(F,H)<br>  G B D(E) A F C H<br>  G B E D A F C H</p>
+<p>后序遍历过程：<br>  A(B,C)<br>  B(G,D) C(F,H) A<br>  G D(E) B F H C A<br>  G E D B F H C A</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/alipay.JPG">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/weixin.JPG">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">WebSocket</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/17/data-structure/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/04/16/coupon/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">优惠券</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -234,9 +363,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

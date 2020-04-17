@@ -156,6 +156,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-data-structure" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/17/data-structure/">数据结构</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/17/data-structure/" class="archive-article-date">
+  	<time datetime="2020-04-17T06:42:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p>前序遍历（根–&gt;左–&gt;右）</p>
+<p>1.访问根节点<br>2.前序遍历左子树<br>3.前序遍历右子树</p>
+<p>中序遍历（左–&gt;根–&gt;右）</p>
+<p>1.中序遍历左子树<br>2.访问根节点<br>3.中序遍历右子树</p>
+<p>后序遍历（左–&gt;右–&gt;根）</p>
+<p>1.后序遍历左子树<br>2.后序遍历右子树<br>3.访问根节点</p>
+<p><img src="/images/data-structure/binaryTree.png" alt=""></p>
+<p>前序遍历过程：<br>  A(B,C)<br>  A B(G,D) C(F,H)<br>  A B G D(E) C F H<br>  A B G D E C F H</p>
+<p>中序遍历过程：<br>  A(B,C)<br>  B(G,D) A C(F,H)<br>  G B D(E) A F C H<br>  G B E D A F C H</p>
+<p>后序遍历过程：<br>  A(B,C)<br>  B(G,D) C(F,H) A<br>  G D(E) B F H C A<br>  G E D B F H C A</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/17/data-structure/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-coupon" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -449,9 +532,7 @@
 <p>安装完成后按 window+R，输入cmd后回车进入系统命令行，输入以下命令查看软件是否安装成功<br>ps:有输出版本号则安装成功</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
 
-<h2 id="二、创建Github仓库"><a href="#二、创建Github仓库" class="headerlink" title="二、创建Github仓库"></a>二、创建Github仓库</h2><p>1.打开<a href="https://github.com/" target="_blank" rel="noopener">github</a>并登录（没有账号就注册）</p>
-<p>2.选中Repositories栏，然后点击右侧的New按钮创建</p>
-<p>3.新建一个名为 你的用户名.github.io 的仓库</p>
+<h2 id="二、创建Github仓库"><a href="#二、创建Github仓库" class="headerlink" title="二、创建Github仓库"></a>二、创建Github仓库</h2><p>1.打开<a href="https://github.com/" target="_blank" rel="noopener">github</a>并登录（没有账号就注册）<br>2.选中Repositories栏，然后点击右侧的New按钮创建<br>3.新建一个名为 你的用户名.github.io 的仓库</p>
 <h2 id="三、配置SSH-key"><a href="#三、配置SSH-key" class="headerlink" title="三、配置SSH key"></a>三、配置SSH key</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"xxx"</span> // 你的github用户名，非昵称</span><br><span class="line">git config --global user.email  <span class="string">"xxx@qq.com"</span> // 填写你的github注册邮箱</span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">"你的邮件地址"</span></span><br></pre></td></tr></table></figure>
 
 <p>1.然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件，用记事本打开并复制里面的内容<br>2.打开你的<a href="https://github.com/" target="_blank" rel="noopener">github</a>主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：<br>3.将刚复制的内容粘贴到key那里，title随便填，最后保存。</p>
@@ -731,6 +812,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
             
             <div class="clearfix"></div>
